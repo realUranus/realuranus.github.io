@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/05/01/OkHttp/</loc>
+    
+    <lastmod>2019-05-01T03:21:26.918Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/01/Java-%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
     
     <lastmod>2019-05-01T03:12:50.577Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2019/04/30/Hexo%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-04-30T16:21:22.877Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/30/OkHttp%E5%AD%A6%E4%B9%A0/</loc>
-    
-    <lastmod>2019-04-25T10:13:47.481Z</lastmod>
     
   </url>
   
