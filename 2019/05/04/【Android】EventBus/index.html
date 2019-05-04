@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>【Android】EventBus | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="官方地址https://github.com/greenrobot/EventBus 三个要素 事件Event 订阅者Subscriber 发布者Publisher  三步使用（和三个要素也是对应的） Define events Prepare subscribers Post events  文档解读文档地址：http://greenrobot.org/eventbus/documentatio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Android】EventBus">
+<meta property="og:url" content="http://yoursite.com/2019/05/04/【Android】EventBus/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="官方地址https://github.com/greenrobot/EventBus 三个要素 事件Event 订阅者Subscriber 发布者Publisher  三步使用（和三个要素也是对应的） Define events Prepare subscribers Post events  文档解读文档地址：http://greenrobot.org/eventbus/documentatio">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-04T08:20:57.415Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Android】EventBus">
+<meta name="twitter:description" content="官方地址https://github.com/greenrobot/EventBus 三个要素 事件Event 订阅者Subscriber 发布者Publisher  三步使用（和三个要素也是对应的） Define events Prepare subscribers Post events  文档解读文档地址：http://greenrobot.org/eventbus/documentatio">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【Android】EventBus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/04/【Android】EventBus/" class="article-date">
+  <time datetime="2019-05-04T08:08:44.000Z" itemprop="datePublished">2019-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【Android】EventBus
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
+<h4 id="三个要素"><a href="#三个要素" class="headerlink" title="三个要素"></a>三个要素</h4><ul>
+<li>事件Event</li>
+<li>订阅者Subscriber</li>
+<li>发布者Publisher</li>
+</ul>
+<h4 id="三步使用（和三个要素也是对应的）"><a href="#三步使用（和三个要素也是对应的）" class="headerlink" title="三步使用（和三个要素也是对应的）"></a>三步使用（和三个要素也是对应的）</h4><ul>
+<li>Define events</li>
+<li>Prepare subscribers</li>
+<li>Post events</li>
+</ul>
+<h4 id="文档解读"><a href="#文档解读" class="headerlink" title="文档解读"></a>文档解读</h4><p>文档地址：<a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/</a></p>
+<ul>
+<li>How to get started</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/how-to-get-started/</a></p>
+<p>事件定义（事件是POJO）：</p>
+<pre><code>public class MessageEvent {
+
+    public final String message;
+
+    public MessageEvent(String message) {
+        this.message = message;
+    }
+}
+</code></pre><p>准备订阅者：</p>
+<pre><code>// This method will be called when a MessageEvent is posted (in the UI thread for Toast)
+@Subscribe(threadMode = ThreadMode.MAIN)
+public void onMessageEvent(MessageEvent event) {
+    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
+}
+
+// This method will be called when a SomeOtherEvent is posted
+@Subscribe
+public void handleSomethingElse(SomeOtherEvent event) {
+    doSomethingWith(event);
+}
+</code></pre><p>发布事件</p>
+<pre><code>EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));
+</code></pre><ul>
+<li>Delivery Threads (ThreadMode)</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/</a></p>
+<ul>
+<li>Configuration</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/configuration/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/configuration/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjv9pmr8q0006p8u5m1lvj7s2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/04/Lintcode-17-Subsets/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Lintcode.17.Subsets
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/04/【Android】触摸事件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">【Android】触摸事件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/04/【Java】jsoup/">【Java】jsoup</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/04/Lintcode-17-Subsets/">Lintcode.17.Subsets</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/04/【Android】EventBus/">【Android】EventBus</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/04/【Android】触摸事件/">【Android】触摸事件</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/03/【Android】Fragment/">【Android】Fragment</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 刘兴良<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
