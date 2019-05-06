@@ -7,17 +7,17 @@
   
   <title>【Android】ListView | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new一个 自定义Adapter：继承一个，比如BaseAdapter 问题 ArrayAdapter requires the resource ID to be a TextView">
+  <meta name="description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new 一个 自定义Adapter：继承一个，比如BaseAdapter 数据更新数据是放在一个List里面的，更新数据却不能直接改变界面。因为数据被适配器Adapter持有了，所以要通过Adapter的notifyData">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Android】ListView">
 <meta property="og:url" content="http://yoursite.com/2019/05/05/【Android】ListView/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new一个 自定义Adapter：继承一个，比如BaseAdapter 问题 ArrayAdapter requires the resource ID to be a TextView">
+<meta property="og:description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new 一个 自定义Adapter：继承一个，比如BaseAdapter 数据更新数据是放在一个List里面的，更新数据却不能直接改变界面。因为数据被适配器Adapter持有了，所以要通过Adapter的notifyData">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T11:13:42.244Z">
+<meta property="og:updated_time" content="2019-05-06T02:19:25.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】ListView">
-<meta name="twitter:description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new一个 自定义Adapter：继承一个，比如BaseAdapter 问题 ArrayAdapter requires the resource ID to be a TextView">
+<meta name="twitter:description" content="官方地址https://developer.android.com/reference/android/widget/ListView Adapter简单创建Adapter： new 一个 自定义Adapter：继承一个，比如BaseAdapter 数据更新数据是放在一个List里面的，更新数据却不能直接改变界面。因为数据被适配器Adapter持有了，所以要通过Adapter的notifyData">
   
   
     <link rel="icon" href="/favicon.png">
@@ -78,16 +78,25 @@
       
         <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/reference/android/widget/ListView" target="_blank" rel="noopener">https://developer.android.com/reference/android/widget/ListView</a></p>
 <h4 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h4><p>简单创建Adapter：</p>
-<pre><code>new一个
+<pre><code>new 一个
 </code></pre><p>自定义Adapter：继承一个，比如BaseAdapter</p>
-<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<h4 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h4><p>数据是放在一个List里面的，更新数据却不能直接改变界面。因为数据被适配器Adapter持有了，所以要通过Adapter的<strong>notifyDataSetChanged()</strong>来实现数据更新。</p>
+<h4 id="点击事件"><a href="#点击事件" class="headerlink" title="点击事件"></a>点击事件</h4><p>地址：<a href="https://developer.android.com/guide/topics/ui/declaring-layout.html#HandlingUserSelections" target="_blank" rel="noopener">https://developer.android.com/guide/topics/ui/declaring-layout.html#HandlingUserSelections</a></p>
+<ul>
+<li>创建一个AdapterView.OnItemClickListener监听器</li>
+<li>给listview绑上</li>
+</ul>
+<h5 id="点击参数"><a href="#点击参数" class="headerlink" title="点击参数"></a>点击参数</h5><p>parent The AdapterView where the click happened.<br>view The view within the AdapterView that was clicked (this will be a view provided by the adapter)</p>
+<pre><code>     * @param position The position of the view in the adapter.
+     * @param id The row id of the item that was clicked.
+</code></pre><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
 <li>ArrayAdapter requires the resource ID to be a TextView</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjvauafky00083su5fl9jag52" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjvchhxty00090su5dmdth18g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,6 +104,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/05/05/【Android】Handler/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【Android】Handler
+        
+      </div>
+    </a>
   
   
     <a href="/2019/05/05/【Android】Retrofit/" id="article-nav-older" class="article-nav-link-wrap">
@@ -136,23 +154,23 @@
       <ul>
         
           <li>
+            <a href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/06/【Java】设计模式/">【Java】设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/05/【Android】Handler/">【Android】Handler</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/05/【Android】ListView/">【Android】ListView</a>
           </li>
         
           <li>
             <a href="/2019/05/05/【Android】Retrofit/">【Android】Retrofit</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/05/Lintcode-669-Coin-Change/">Lintcode.669.Coin Change</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/05/【Android】Data-Storage数据存储/">【Android】Data Storage数据存储</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/04/【Java】jsoup/">【Java】jsoup</a>
           </li>
         
       </ul>
