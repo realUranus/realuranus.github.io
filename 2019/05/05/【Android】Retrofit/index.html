@@ -14,7 +14,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="github 地址https://square.github.io/retrofit/https://github.com/square/retrofit 引入官方： implementation &amp;#39;com.squareup.retrofit2:retrofit:(insert latest version)&amp;#39; 然后替换下版本： implementation &amp;#39;com.sq">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-06T14:10:50.611Z">
+<meta property="og:updated_time" content="2019-05-07T05:41:57.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】Retrofit">
 <meta name="twitter:description" content="github 地址https://square.github.io/retrofit/https://github.com/square/retrofit 引入官方： implementation &amp;#39;com.squareup.retrofit2:retrofit:(insert latest version)&amp;#39; 然后替换下版本： implementation &amp;#39;com.sq">
@@ -82,11 +82,33 @@
 </code></pre><p>然后替换下版本：</p>
 <pre><code>implementation &#39;com.squareup.retrofit2:retrofit:2.0.0&#39;
 </code></pre><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>使用<strong>注解</strong>来简化Http请求</p>
-<h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4>
+<h4 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h4><p>官方示例</p>
+<pre><code>public interface GitHubService {
+  @GET(&quot;users/{user}/repos&quot;)
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path(&quot;user&quot;) String user);
+}
+</code></pre><p>其中：</p>
+<h4 id="生成接口的实现"><a href="#生成接口的实现" class="headerlink" title="生成接口的实现"></a>生成接口的实现</h4><pre><code>Retrofit retrofit = new Retrofit.Builder()
+    .baseUrl(&quot;https://api.github.com/&quot;)
+    .build();
+GitHubService service = retrofit.create(GitHubService.class);
+</code></pre><h4 id="Http请求"><a href="#Http请求" class="headerlink" title="Http请求"></a>Http请求</h4><h4 id="头部添加"><a href="#头部添加" class="headerlink" title="头部添加"></a>头部添加</h4><ul>
+<li>静态</li>
+</ul>
+<p>直接在方法上面进行Headers设置</p>
+<ul>
+<li>动态</li>
+</ul>
+<h4 id="Https"><a href="#Https" class="headerlink" title="Https"></a>Https</h4><h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li>Type okhttp3.Call does not have type parameters</li>
+</ul>
+<p>当使用retrofit定义接口的时候，提示了这个错误。<br>原因：不应该引入okhttp3.Call而应该：</p>
+<pre><code>import retrofit2.Call
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvchhxu2000a0su5d2ps7uv9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvdvvmss000fb8u5vbgyrlae" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,6 +166,10 @@
       <ul>
         
           <li>
+            <a href="/2019/05/07/【Android】gson/">【Android】gson</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
           </li>
         
@@ -157,10 +183,6 @@
         
           <li>
             <a href="/2019/05/05/【Android】ListView/">【Android】ListView</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/05/【Android】Retrofit/">【Android】Retrofit</a>
           </li>
         
       </ul>

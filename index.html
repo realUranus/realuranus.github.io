@@ -52,6 +52,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】gson" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/07/【Android】gson/" class="article-date">
+  <time datetime="2019-05-07T06:24:54.000Z" itemprop="datePublished">2019-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/【Android】gson/">【Android】gson</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/google/gson" target="_blank" rel="noopener">https://github.com/google/gson</a></p>
+<h4 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/07/【Android】gson/" data-id="cjvdvvmso000db8u5wnycvhyj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】HandlerThread" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/06/【Android】HandlerThread/" class="article-date">
@@ -82,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Android】HandlerThread/" data-id="cjvchhxtu00080su5uryz7y5t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/【Android】HandlerThread/" data-id="cjvdvvmsk000cb8u5p9vc42ym" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Java】设计模式/" data-id="cjvchhxut000d0su5391akjhy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/【Java】设计模式/" data-id="cjvdvvmsy000hb8u5hm816slv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +195,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Handler/" data-id="cjvchhxtn00070su5jwfxzlpp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Handler/" data-id="cjvdvvmru000ab8u5ftixd3ki" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjvchhxty00090su5dmdth18g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjvdvvms7000bb8u5jyuery6m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -248,11 +285,33 @@
 </code></pre><p>然后替换下版本：</p>
 <pre><code>implementation &#39;com.squareup.retrofit2:retrofit:2.0.0&#39;
 </code></pre><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>使用<strong>注解</strong>来简化Http请求</p>
-<h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4>
+<h4 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h4><p>官方示例</p>
+<pre><code>public interface GitHubService {
+  @GET(&quot;users/{user}/repos&quot;)
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path(&quot;user&quot;) String user);
+}
+</code></pre><p>其中：</p>
+<h4 id="生成接口的实现"><a href="#生成接口的实现" class="headerlink" title="生成接口的实现"></a>生成接口的实现</h4><pre><code>Retrofit retrofit = new Retrofit.Builder()
+    .baseUrl(&quot;https://api.github.com/&quot;)
+    .build();
+GitHubService service = retrofit.create(GitHubService.class);
+</code></pre><h4 id="Http请求"><a href="#Http请求" class="headerlink" title="Http请求"></a>Http请求</h4><h4 id="头部添加"><a href="#头部添加" class="headerlink" title="头部添加"></a>头部添加</h4><ul>
+<li>静态</li>
+</ul>
+<p>直接在方法上面进行Headers设置</p>
+<ul>
+<li>动态</li>
+</ul>
+<h4 id="Https"><a href="#Https" class="headerlink" title="Https"></a>Https</h4><h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li>Type okhttp3.Call does not have type parameters</li>
+</ul>
+<p>当使用retrofit定义接口的时候，提示了这个错误。<br>原因：不应该引入okhttp3.Call而应该：</p>
+<pre><code>import retrofit2.Call
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvchhxu2000a0su5d2ps7uv9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvdvvmss000fb8u5vbgyrlae" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvchhxtf00050su5ggvd9cgh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvdvvmrc0005b8u5zgfrum2t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvchhxux000e0su5xh9jryu9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvdvvmrj0007b8u5ponxzgqy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -382,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvchhxun000c0su5bc2n57mx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvdvvmsv000gb8u5pxey5uwm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -419,90 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvchhxsy00040su5koremnyw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Android】EventBus" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/04/【Android】EventBus/" class="article-date">
-  <time datetime="2019-05-04T08:08:44.000Z" itemprop="datePublished">2019-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/【Android】EventBus/">【Android】EventBus</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
-<h4 id="三个要素"><a href="#三个要素" class="headerlink" title="三个要素"></a>三个要素</h4><ul>
-<li>事件Event</li>
-<li>订阅者Subscriber</li>
-<li>发布者Publisher</li>
-</ul>
-<h4 id="三步使用（和三个要素也是对应的）"><a href="#三步使用（和三个要素也是对应的）" class="headerlink" title="三步使用（和三个要素也是对应的）"></a>三步使用（和三个要素也是对应的）</h4><ul>
-<li>Define events</li>
-<li>Prepare subscribers</li>
-<li>Post events</li>
-</ul>
-<h4 id="文档解读"><a href="#文档解读" class="headerlink" title="文档解读"></a>文档解读</h4><p>文档地址：<a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/</a></p>
-<ul>
-<li>How to get started</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/how-to-get-started/</a></p>
-<p>事件定义（事件是POJO）：</p>
-<pre><code>public class MessageEvent {
-
-    public final String message;
-
-    public MessageEvent(String message) {
-        this.message = message;
-    }
-}
-</code></pre><p>准备订阅者：</p>
-<pre><code>// This method will be called when a MessageEvent is posted (in the UI thread for Toast)
-@Subscribe(threadMode = ThreadMode.MAIN)
-public void onMessageEvent(MessageEvent event) {
-    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
-}
-
-// This method will be called when a SomeOtherEvent is posted
-@Subscribe
-public void handleSomethingElse(SomeOtherEvent event) {
-    doSomethingWith(event);
-}
-</code></pre><p>发布事件</p>
-<pre><code>EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));
-</code></pre><ul>
-<li>Delivery Threads (ThreadMode)</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/</a></p>
-<ul>
-<li>Configuration</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/configuration/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/configuration/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvchhxvc000g0su5kee8zbnf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvdvvmr80004b8u5iotloeuz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -548,6 +524,10 @@ public void handleSomethingElse(SomeOtherEvent event) {
       <ul>
         
           <li>
+            <a href="/2019/05/07/【Android】gson/">【Android】gson</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
           </li>
         
@@ -561,10 +541,6 @@ public void handleSomethingElse(SomeOtherEvent event) {
         
           <li>
             <a href="/2019/05/05/【Android】ListView/">【Android】ListView</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/05/【Android】Retrofit/">【Android】Retrofit</a>
           </li>
         
       </ul>

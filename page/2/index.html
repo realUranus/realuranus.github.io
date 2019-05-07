@@ -52,6 +52,89 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】EventBus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/04/【Android】EventBus/" class="article-date">
+  <time datetime="2019-05-04T08:08:44.000Z" itemprop="datePublished">2019-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/04/【Android】EventBus/">【Android】EventBus</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
+<h4 id="三个要素"><a href="#三个要素" class="headerlink" title="三个要素"></a>三个要素</h4><ul>
+<li>事件Event</li>
+<li>订阅者Subscriber</li>
+<li>发布者Publisher</li>
+</ul>
+<h4 id="三步使用（和三个要素也是对应的）"><a href="#三步使用（和三个要素也是对应的）" class="headerlink" title="三步使用（和三个要素也是对应的）"></a>三步使用（和三个要素也是对应的）</h4><ul>
+<li>Define events</li>
+<li>Prepare subscribers</li>
+<li>Post events</li>
+</ul>
+<h4 id="文档解读"><a href="#文档解读" class="headerlink" title="文档解读"></a>文档解读</h4><p>文档地址：<a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/</a></p>
+<ul>
+<li>How to get started</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/how-to-get-started/</a></p>
+<p>事件定义（事件是POJO）：</p>
+<pre><code>public class MessageEvent {
+
+    public final String message;
+
+    public MessageEvent(String message) {
+        this.message = message;
+    }
+}
+</code></pre><p>准备订阅者：</p>
+<pre><code>// This method will be called when a MessageEvent is posted (in the UI thread for Toast)
+@Subscribe(threadMode = ThreadMode.MAIN)
+public void onMessageEvent(MessageEvent event) {
+    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
+}
+
+// This method will be called when a SomeOtherEvent is posted
+@Subscribe
+public void handleSomethingElse(SomeOtherEvent event) {
+    doSomethingWith(event);
+}
+</code></pre><p>发布事件</p>
+<pre><code>EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));
+</code></pre><ul>
+<li>Delivery Threads (ThreadMode)</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/</a></p>
+<ul>
+<li>Configuration</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/configuration/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/configuration/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvdvvmrn0008b8u5lynkziyq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】触摸事件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/04/【Android】触摸事件/" class="article-date">
@@ -78,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvchhxuf000b0su5ntmbawfh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvdvvmsq000eb8u5mflbmlpw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvchhxv4000f0su504oi2kr9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvdvvmrr0009b8u5x6ivausp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvchhxs200020su5btrvut9u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvdvvmqv0002b8u5ka6kcm9d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvchhxsr00030su523g6c9tj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvdvvmr10003b8u5fapopypj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -255,20 +338,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="GETEXAMPLE"><a href="#GETEXAMPLE" class="headerlink" title="GETEXAMPLE"></a>GETEXAMPLE</h4><p>三要素：</p>
+        <h4 id="GET-EXAMPLE"><a href="#GET-EXAMPLE" class="headerlink" title="GET EXAMPLE"></a>GET EXAMPLE</h4><p>三要素：</p>
 <ul>
 <li>request<br>包含参数</li>
 <li>client<br>执行请求的客户端</li>
 <li>response<br>返回的结果</li>
 </ul>
 <p>添加头部：<br>addHeader（key，value）</p>
-<h4 id="POSTEXAMPLE"><a href="#POSTEXAMPLE" class="headerlink" title="POSTEXAMPLE"></a>POSTEXAMPLE</h4><h4 id="AccessHeader"><a href="#AccessHeader" class="headerlink" title="AccessHeader"></a>AccessHeader</h4><p>获取头部的值：<br>Response.header()</p>
+<h4 id="POST-EXAMPLE"><a href="#POST-EXAMPLE" class="headerlink" title="POST EXAMPLE"></a>POST EXAMPLE</h4><h4 id="AccessHeader"><a href="#AccessHeader" class="headerlink" title="AccessHeader"></a>AccessHeader</h4><p>获取头部的值：<br>Response.header()</p>
 <h4 id="AsynchronousGet"><a href="#AsynchronousGet" class="headerlink" title="AsynchronousGet"></a>AsynchronousGet</h4><p>异步获取</p>
+<h3 id="Wiki"><a href="#Wiki" class="headerlink" title="Wiki"></a>Wiki</h3><p><a href="https://github.com/square/okhttp/wiki" target="_blank" rel="noopener">https://github.com/square/okhttp/wiki</a></p>
+<ul>
+<li>Calls</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/OkHttp/" data-id="cjvchhxtj00060su5s9kpazsf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/OkHttp/" data-id="cjvdvvmrg0006b8u5xacg2pgg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +395,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Java-内部类/" data-id="cjvchhxru00010su5jv9h9ycs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/Java-内部类/" data-id="cjvdvvmpr0000b8u5tqx36j45" class="article-share-link">Share</a>
       
       
     </footer>
@@ -351,7 +438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/30/Hexo使用/" data-id="cjvchhxoc00000su5htuyeo2s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/30/Hexo使用/" data-id="cjvdvvmqn0001b8u5b1lk3dua" class="article-share-link">Share</a>
       
       
     </footer>
@@ -397,6 +484,10 @@
       <ul>
         
           <li>
+            <a href="/2019/05/07/【Android】gson/">【Android】gson</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
           </li>
         
@@ -410,10 +501,6 @@
         
           <li>
             <a href="/2019/05/05/【Android】ListView/">【Android】ListView</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/05/【Android】Retrofit/">【Android】Retrofit</a>
           </li>
         
       </ul>
