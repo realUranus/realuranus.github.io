@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>【Android】RecyclerView | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="官方地址https://developer.android.google.cn/guide/topics/ui/layout/recyclerviewhttps://developer.android.com/reference/android/support/v7/widget/RecyclerView 官方示例https://github.com/googlesamples/android-R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Android】RecyclerView">
+<meta property="og:url" content="http://yoursite.com/2019/05/07/【Android】RecyclerView/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="官方地址https://developer.android.google.cn/guide/topics/ui/layout/recyclerviewhttps://developer.android.com/reference/android/support/v7/widget/RecyclerView 官方示例https://github.com/googlesamples/android-R">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-08T10:49:35.697Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Android】RecyclerView">
+<meta name="twitter:description" content="官方地址https://developer.android.google.cn/guide/topics/ui/layout/recyclerviewhttps://developer.android.com/reference/android/support/v7/widget/RecyclerView 官方示例https://github.com/googlesamples/android-R">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【Android】RecyclerView" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/07/【Android】RecyclerView/" class="article-date">
+  <time datetime="2019-05-07T14:23:54.000Z" itemprop="datePublished">2019-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【Android】RecyclerView
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/guide/topics/ui/layout/recyclerview" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/ui/layout/recyclerview</a><br><a href="https://developer.android.com/reference/android/support/v7/widget/RecyclerView" target="_blank" rel="noopener">https://developer.android.com/reference/android/support/v7/widget/RecyclerView</a></p>
+<h4 id="官方示例"><a href="#官方示例" class="headerlink" title="官方示例"></a>官方示例</h4><p><a href="https://github.com/googlesamples/android-RecyclerView/" target="_blank" rel="noopener">https://github.com/googlesamples/android-RecyclerView/</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><h4 id="LayoutManager"><a href="#LayoutManager" class="headerlink" title="LayoutManager"></a>LayoutManager</h4><p>Adapter<br>数据和UI的桥梁。</p>
+<p>ViewHolder</p>
+<p>LayoutManager</p>
+<p>ItemDecoration</p>
+<p>ItemAnimator</p>
+<h4 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h4><ul>
+<li>onBindViewHolder</li>
+</ul>
+<p>数据和界面绑定</p>
+<ul>
+<li>public static class MyViewHolder extends RecyclerView.ViewHolder</li>
+</ul>
+<p>自定义的ViewHolder类</p>
+<ul>
+<li>onCreateViewHolder</li>
+</ul>
+<p>创建View</p>
+<h4 id="ViewHolder"><a href="#ViewHolder" class="headerlink" title="ViewHolder"></a>ViewHolder</h4><h4 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h4><h4 id="布局文件添加组件"><a href="#布局文件添加组件" class="headerlink" title="布局文件添加组件"></a>布局文件添加组件</h4><h4 id="添加适配器"><a href="#添加适配器" class="headerlink" title="添加适配器"></a>添加适配器</h4><h4 id="适配器加入数据"><a href="#适配器加入数据" class="headerlink" title="适配器加入数据"></a>适配器加入数据</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/07/【Android】RecyclerView/" data-id="cjvfd2f7f000a9su5vnyh8489" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/08/【Android】矢量图标/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【Android】矢量图标
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/07/【Android】gson/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">【Android】gson</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/08/【Android】矢量图标/">【Android】矢量图标</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/07/【Android】RecyclerView/">【Android】RecyclerView</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/07/【Android】gson/">【Android】gson</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/06/【Java】设计模式/">【Java】设计模式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 刘兴良<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
