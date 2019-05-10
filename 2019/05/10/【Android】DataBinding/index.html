@@ -5,19 +5,19 @@
   
 
   
-  <title>Java 内部类 | </title>
+  <title>【Android】DataBinding | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简介访问权限public private protected内部类也可以用访问控制符来修饰。  public：任何地方都可以访问private：只能在外部类访问protected：同一个包 或者 继承了外部类不加权限控制符（default）：同一个包可以访问（不同包继承了也不行，提示：Cannot accessed from outside package）  类型">
+  <meta name="description" content="官方地址https://developer.android.com/topic/libraries/data-binding/ 简介bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically 布局中的UI组件和数据源进行绑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 内部类">
-<meta property="og:url" content="http://yoursite.com/2019/05/01/Java-内部类/index.html">
+<meta property="og:title" content="【Android】DataBinding">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/【Android】DataBinding/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="简介访问权限public private protected内部类也可以用访问控制符来修饰。  public：任何地方都可以访问private：只能在外部类访问protected：同一个包 或者 继承了外部类不加权限控制符（default）：同一个包可以访问（不同包继承了也不行，提示：Cannot accessed from outside package）  类型">
+<meta property="og:description" content="官方地址https://developer.android.com/topic/libraries/data-binding/ 简介bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically 布局中的UI组件和数据源进行绑">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-01T03:12:50.577Z">
+<meta property="og:updated_time" content="2019-05-10T07:24:30.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 内部类">
-<meta name="twitter:description" content="简介访问权限public private protected内部类也可以用访问控制符来修饰。  public：任何地方都可以访问private：只能在外部类访问protected：同一个包 或者 继承了外部类不加权限控制符（default）：同一个包可以访问（不同包继承了也不行，提示：Cannot accessed from outside package）  类型">
+<meta name="twitter:title" content="【Android】DataBinding">
+<meta name="twitter:description" content="官方地址https://developer.android.com/topic/libraries/data-binding/ 简介bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically 布局中的UI组件和数据源进行绑">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,10 +54,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Java-内部类" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【Android】DataBinding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/01/Java-内部类/" class="article-date">
-  <time datetime="2019-05-01T02:54:54.000Z" itemprop="datePublished">2019-05-01</time>
+    <a href="/2019/05/10/【Android】DataBinding/" class="article-date">
+  <time datetime="2019-05-10T03:08:49.000Z" itemprop="datePublished">2019-05-10</time>
 </a>
     
   </div>
@@ -68,7 +68,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Java 内部类
+      【Android】DataBinding
     </h1>
   
 
@@ -76,15 +76,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><h4 id="访问权限public-private-protected"><a href="#访问权限public-private-protected" class="headerlink" title="访问权限public private protected"></a>访问权限public private protected</h4><p>内部类也可以用访问控制符来修饰。</p>
-<blockquote>
-<p>public：任何地方都可以访问<br>private：只能在外部类访问<br>protected：同一个包 或者 继承了外部类<br>不加权限控制符（default）：同一个包可以访问（不同包继承了也不行，提示：Cannot accessed from outside package）</p>
-</blockquote>
-<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4>
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/topic/libraries/data-binding/" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/data-binding/</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically
+</code></pre><p>布局中的UI组件和数据源进行绑定，<strong>声明式的而非编程式的</strong>。</p>
+<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><p>地址：<a href="https://developer.android.com/topic/libraries/data-binding/start.html#build_environment" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/data-binding/start.html#build_environment</a></p>
+<ul>
+<li><p>开启databinding</p>
+</li>
+<li><p>布局文件声明</p>
+</li>
+</ul>
+<p>1、根元素为layout</p>
+<p>2、data标签指明变量属性。variable属性。</p>
+<p>3、视图：没有使用databinding的布局内容</p>
+<ul>
+<li><p>数据类声明</p>
+</li>
+<li><p>设置绑定</p>
+</li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p><a href="https://github.com/googlesamples/android-databinding" target="_blank" rel="noopener">https://github.com/googlesamples/android-databinding</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Java-内部类/" data-id="cjvi8tfzr0001tsu51rgf39h1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/【Android】DataBinding/" data-id="cjvi8tg22000dtsu5s8soij5q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -96,19 +112,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/05/01/OkHttp/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/10/【Android】LiveData/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          OkHttp
+          【Android】LiveData
         
       </div>
     </a>
   
   
-    <a href="/2019/04/30/Hexo使用/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/09/SwipeRefreshLayout/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hexo使用</div>
+      <div class="article-nav-title">SwipeRefreshLayout</div>
     </a>
   
 </nav>
