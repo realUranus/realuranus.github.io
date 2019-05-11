@@ -52,6 +52,92 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】EventBus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/04/【Android】EventBus/" class="article-date">
+  <time datetime="2019-05-04T08:08:44.000Z" itemprop="datePublished">2019-05-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/04/【Android】EventBus/">【Android】EventBus</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
+<h4 id="三个要素"><a href="#三个要素" class="headerlink" title="三个要素"></a>三个要素</h4><ul>
+<li>事件Event</li>
+<li>订阅者Subscriber</li>
+<li>发布者Publisher</li>
+</ul>
+<h4 id="三步使用（和三个要素也是对应的）"><a href="#三步使用（和三个要素也是对应的）" class="headerlink" title="三步使用（和三个要素也是对应的）"></a>三步使用（和三个要素也是对应的）</h4><ul>
+<li>Define events</li>
+<li>Prepare subscribers</li>
+<li>Post events</li>
+</ul>
+<h4 id="文档解读"><a href="#文档解读" class="headerlink" title="文档解读"></a>文档解读</h4><p>文档地址：<a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/</a></p>
+<ul>
+<li>How to get started</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/how-to-get-started/</a></p>
+<p>事件定义（事件是POJO）：</p>
+<pre><code>public class MessageEvent {
+
+    public final String message;
+
+    public MessageEvent(String message) {
+        this.message = message;
+    }
+}
+</code></pre><p>准备订阅者：</p>
+<pre><code>// This method will be called when a MessageEvent is posted (in the UI thread for Toast)
+@Subscribe(threadMode = ThreadMode.MAIN)
+public void onMessageEvent(MessageEvent event) {
+    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
+}
+
+// This method will be called when a SomeOtherEvent is posted
+@Subscribe
+public void handleSomethingElse(SomeOtherEvent event) {
+    doSomethingWith(event);
+}
+</code></pre><p>发布事件</p>
+<pre><code>EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));
+</code></pre><ul>
+<li>Delivery Threads (ThreadMode)</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/</a></p>
+<ul>
+<li>Configuration</li>
+</ul>
+<p>地址：<a href="http://greenrobot.org/eventbus/documentation/configuration/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/configuration/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvj7hx7z000pecu5392dfv4u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+    <span id="busuanzi_container_page_pv">
+        View: <span id="busuanzi_value_page_pv"></span>
+     </span>     
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】触摸事件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/04/【Android】触摸事件/" class="article-date">
@@ -78,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvi8tg2k000ktsu55xjwzlsz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvj7hx6c000mecu5px6v1f43" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvi8tg1d000atsu5y1fvmhla" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvj7hx82000qecu54p501d4q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvi8tfzv0002tsu5t4a7rtfy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvj7hx3u0002ecu5ll9zklu3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvi8tg0j0003tsu5wx20v1o0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvj7hx450003ecu5ysq8v6al" class="article-share-link">Share</a>
       
       
     </footer>
@@ -284,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/OkHttp/" data-id="cjvi8tg0u0005tsu5xq1gs9mh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/OkHttp/" data-id="cjvj7hx4n0006ecu5yjvsjjni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Java-内部类/" data-id="cjvi8tfzr0001tsu51rgf39h1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/Java-内部类/" data-id="cjvj7hx3o0001ecu5onmw3w60" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/30/Hexo使用/" data-id="cjvi8tfyv0000tsu5em7pi78a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/30/Hexo使用/" data-id="cjvj7hwzm0000ecu54ozq1zgn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -422,6 +508,10 @@
       <ul>
         
           <li>
+            <a href="/2019/05/11/【Design-Pattern】Factory-Pattern/">【Design Pattern】Factory Pattern</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/10/【Android】Custom-View-Components/">【Android】Custom View Components</a>
           </li>
         
@@ -435,10 +525,6 @@
         
           <li>
             <a href="/2019/05/10/【Android】DataBinding/">【Android】DataBinding</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/09/SwipeRefreshLayout/">SwipeRefreshLayout</a>
           </li>
         
       </ul>
