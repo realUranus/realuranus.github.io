@@ -5,19 +5,19 @@
   
 
   
-  <title>【Android】Service | </title>
+  <title>【Android】Content Provider | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="官方链接https://developer.android.google.cn/reference/android/app/Servicehttps://developer.android.google.cn/guide/components/services 简介either an application&amp;#39;s desire to perform a longer-running oper">
+  <meta name="description" content="官方地址https://developer.android.google.cn/guide/topics/providers/content-provider-basics 简介A content provider manages access to a central repository of data. A content provider presents data to external">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Android】Service">
-<meta property="og:url" content="http://yoursite.com/2019/05/12/【Android】Service/index.html">
+<meta property="og:title" content="【Android】Content Provider">
+<meta property="og:url" content="http://yoursite.com/2019/05/13/【Android】Content-Provider/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="官方链接https://developer.android.google.cn/reference/android/app/Servicehttps://developer.android.google.cn/guide/components/services 简介either an application&amp;#39;s desire to perform a longer-running oper">
+<meta property="og:description" content="官方地址https://developer.android.google.cn/guide/topics/providers/content-provider-basics 简介A content provider manages access to a central repository of data. A content provider presents data to external">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T15:22:45.166Z">
+<meta property="og:updated_time" content="2019-05-13T03:13:57.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Android】Service">
-<meta name="twitter:description" content="官方链接https://developer.android.google.cn/reference/android/app/Servicehttps://developer.android.google.cn/guide/components/services 简介either an application&amp;#39;s desire to perform a longer-running oper">
+<meta name="twitter:title" content="【Android】Content Provider">
+<meta name="twitter:description" content="官方地址https://developer.android.google.cn/guide/topics/providers/content-provider-basics 简介A content provider manages access to a central repository of data. A content provider presents data to external">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,10 +54,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-【Android】Service" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【Android】Content-Provider" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/12/【Android】Service/" class="article-date">
-  <time datetime="2019-05-12T15:22:13.000Z" itemprop="datePublished">2019-05-12</time>
+    <a href="/2019/05/13/【Android】Content-Provider/" class="article-date">
+  <time datetime="2019-05-13T02:28:30.000Z" itemprop="datePublished">2019-05-13</time>
 </a>
     
   </div>
@@ -68,7 +68,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      【Android】Service
+      【Android】Content Provider
     </h1>
   
 
@@ -76,22 +76,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="官方链接"><a href="#官方链接" class="headerlink" title="官方链接"></a>官方链接</h4><p><a href="https://developer.android.google.cn/reference/android/app/Service" target="_blank" rel="noopener">https://developer.android.google.cn/reference/android/app/Service</a><br><a href="https://developer.android.google.cn/guide/components/services" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/services</a></p>
-<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>either an application&#39;s desire to perform a longer-running operation while not interacting with the user or to supply functionality for other applications to use
-</code></pre><h4 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h4><ul>
-<li>startService</li>
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/guide/topics/providers/content-provider-basics" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/providers/content-provider-basics</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>A content provider manages access to a central repository of data.
+</code></pre><pre><code>A content provider presents data to external applications as one or more tables that are similar to the tables found in a relational database.（方便外部应用访问）
+</code></pre><h4 id="创建一个Content-Provider"><a href="#创建一个Content-Provider" class="headerlink" title="创建一个Content Provider"></a>创建一个Content Provider</h4><p>示例地址：<a href="https://developer.android.google.cn/guide/topics/providers/content-provider-creating.html" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/providers/content-provider-creating.html</a></p>
+<h4 id="数据提供给？"><a href="#数据提供给？" class="headerlink" title="数据提供给？"></a>数据提供给？</h4><ul>
+<li>其他应用</li>
+<li>Cursorload</li>
+<li>Widgets</li>
+<li>Search</li>
+<li>Adapter</li>
 </ul>
-<p>tell the system about something it wants to be doing in the background</p>
-<p>onCreate执行一次 - onStartCommand可以执行多次 - stopService直接执行onDestroy</p>
-<ul>
-<li>bindService</li>
-</ul>
-<p>expose some of its functionality to other applications.</p>
-<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><h4 id="本地示例"><a href="#本地示例" class="headerlink" title="本地示例"></a>本地示例</h4><h4 id="远程示例"><a href="#远程示例" class="headerlink" title="远程示例"></a>远程示例</h4><h4 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h4>
+<h4 id="访问Provider"><a href="#访问Provider" class="headerlink" title="访问Provider"></a>访问Provider</h4><p>ContentResolver</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/12/【Android】Service/" data-id="cjvlsmr1f000rl6pikqsbz23c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/13/【Android】Content-Provider/" data-id="cjvlsmr0j0006l6pisi9nq2iq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -100,19 +101,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/05/13/【Android】Content-Provider/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          【Android】Content Provider
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/11/【Design-Pattern】Factory-Pattern/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/12/【Android】Service/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">【Design Pattern】Factory Pattern</div>
+      <div class="article-nav-title">【Android】Service</div>
     </a>
   
 </nav>
