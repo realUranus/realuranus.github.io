@@ -52,6 +52,70 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】Retrofit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/05/【Android】Retrofit/" class="article-date">
+  <time datetime="2019-05-05T08:15:04.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/05/【Android】Retrofit/">【Android】Retrofit</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="github-地址"><a href="#github-地址" class="headerlink" title="github 地址"></a>github 地址</h4><p><a href="https://square.github.io/retrofit/" target="_blank" rel="noopener">https://square.github.io/retrofit/</a><br><a href="https://github.com/square/retrofit" target="_blank" rel="noopener">https://github.com/square/retrofit</a></p>
+<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>官方：</p>
+<pre><code>implementation &#39;com.squareup.retrofit2:retrofit:(insert latest version)&#39;
+</code></pre><p>然后替换下版本：</p>
+<pre><code>implementation &#39;com.squareup.retrofit2:retrofit:2.0.0&#39;
+</code></pre><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>使用<strong>注解</strong>来简化Http请求</p>
+<h4 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h4><p>官方示例</p>
+<pre><code>public interface GitHubService {
+  @GET(&quot;users/{user}/repos&quot;)
+  Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path(&quot;user&quot;) String user);
+}
+</code></pre><p>其中：</p>
+<h4 id="生成接口的实现"><a href="#生成接口的实现" class="headerlink" title="生成接口的实现"></a>生成接口的实现</h4><pre><code>Retrofit retrofit = new Retrofit.Builder()
+    .baseUrl(&quot;https://api.github.com/&quot;)
+    .build();
+GitHubService service = retrofit.create(GitHubService.class);
+</code></pre><h4 id="Http请求"><a href="#Http请求" class="headerlink" title="Http请求"></a>Http请求</h4><h4 id="头部添加"><a href="#头部添加" class="headerlink" title="头部添加"></a>头部添加</h4><ul>
+<li>静态</li>
+</ul>
+<p>直接在方法上面进行Headers设置</p>
+<ul>
+<li>动态</li>
+</ul>
+<h4 id="Https"><a href="#Https" class="headerlink" title="Https"></a>Https</h4><h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li>Type okhttp3.Call does not have type parameters</li>
+</ul>
+<p>当使用retrofit定义接口的时候，提示了这个错误。<br>原因：不应该引入okhttp3.Call而应该：</p>
+<pre><code>import retrofit2.Call
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvs9gxi8000m8dpiabq4of4g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Lintcode-669-Coin-Change" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/05/Lintcode-669-Coin-Change/" class="article-date">
@@ -80,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvojdt45000524pig2mweopr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvs9gxhq00098dpifcwttchq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvojdt4n000c24pip59xhznz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvs9gxi3000h8dpi9mxynied" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvojdt5g000u24pinvuhv4ne" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvs9gxie000s8dpiso5po4gl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -209,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvojdt43000424piq1qxrj22" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvs9gxhi00048dpic4kf0jpd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -292,7 +356,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvojdt4p000e24pif2d4grx5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvs9gxhx000c8dpi24rw06xt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -328,7 +392,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvojdt58000r24pibbwaa09b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvs9gxib000q8dpi2y5xrx9d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -398,7 +462,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvojdt4q000f24pijhcga03t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvs9gxhz000d8dpiblangf0r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -435,7 +499,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvojdt3y000224piz7ocy3i0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvs9gxh100018dpia4kpptgi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -473,56 +537,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvojdt40000324pi37cdrm7k" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-OkHttp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/01/OkHttp/" class="article-date">
-  <time datetime="2019-05-01T03:20:43.000Z" itemprop="datePublished">2019-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/01/OkHttp/">OkHttp</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="GET-EXAMPLE"><a href="#GET-EXAMPLE" class="headerlink" title="GET EXAMPLE"></a>GET EXAMPLE</h4><p>三要素：</p>
-<ul>
-<li>request<br>包含参数</li>
-<li>client<br>执行请求的客户端</li>
-<li>response<br>返回的结果</li>
-</ul>
-<p>添加头部：<br>addHeader（key，value）</p>
-<h4 id="POST-EXAMPLE"><a href="#POST-EXAMPLE" class="headerlink" title="POST EXAMPLE"></a>POST EXAMPLE</h4><h4 id="AccessHeader"><a href="#AccessHeader" class="headerlink" title="AccessHeader"></a>AccessHeader</h4><p>获取头部的值：<br>Response.header()</p>
-<h4 id="AsynchronousGet"><a href="#AsynchronousGet" class="headerlink" title="AsynchronousGet"></a>AsynchronousGet</h4><p>异步获取</p>
-<h3 id="Wiki"><a href="#Wiki" class="headerlink" title="Wiki"></a>Wiki</h3><p><a href="https://github.com/square/okhttp/wiki" target="_blank" rel="noopener">https://github.com/square/okhttp/wiki</a></p>
-<ul>
-<li>Calls</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/OkHttp/" data-id="cjvojdt46000624pibmz2a511" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvs9gxgv00008dpib1491sov" class="article-share-link">Share</a>
       
       
     </footer>
@@ -568,6 +583,10 @@ public void handleSomethingElse(SomeOtherEvent event) {
       <ul>
         
           <li>
+            <a href="/2019/05/17/【Android】ANR/">【Android】ANR</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/15/【Design-Pattern】Publish-Subscribe-Pattern/">【Design Pattern】Publish/Subscribe Pattern</a>
           </li>
         
@@ -581,10 +600,6 @@ public void handleSomethingElse(SomeOtherEvent event) {
         
           <li>
             <a href="/2019/05/12/【Android】Service/">【Android】Service</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/11/【Design-Pattern】Factory-Pattern/">【Design Pattern】Factory Pattern</a>
           </li>
         
       </ul>
