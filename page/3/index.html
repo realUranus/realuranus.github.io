@@ -52,6 +52,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】ListView" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/05/【Android】ListView/" class="article-date">
+  <time datetime="2019-05-05T10:59:03.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/05/【Android】ListView/">【Android】ListView</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/reference/android/widget/ListView" target="_blank" rel="noopener">https://developer.android.com/reference/android/widget/ListView</a></p>
+<h4 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h4><p>简单创建Adapter：</p>
+<pre><code>new 一个
+</code></pre><p>自定义Adapter：继承一个，比如BaseAdapter</p>
+<h4 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h4><p>数据是放在一个List里面的，更新数据却不能直接改变界面。因为数据被适配器Adapter持有了，所以要通过Adapter的<strong>notifyDataSetChanged()</strong>来实现数据更新。</p>
+<h4 id="点击事件"><a href="#点击事件" class="headerlink" title="点击事件"></a>点击事件</h4><p>地址：<a href="https://developer.android.com/guide/topics/ui/declaring-layout.html#HandlingUserSelections" target="_blank" rel="noopener">https://developer.android.com/guide/topics/ui/declaring-layout.html#HandlingUserSelections</a></p>
+<ul>
+<li>创建一个AdapterView.OnItemClickListener监听器</li>
+<li>给listview绑上</li>
+</ul>
+<h5 id="点击参数"><a href="#点击参数" class="headerlink" title="点击参数"></a>点击参数</h5><p>parent The AdapterView where the click happened.<br>view The view within the AdapterView that was clicked (this will be a view provided by the adapter)</p>
+<pre><code>     * @param position The position of the view in the adapter.
+     * @param id The row id of the item that was clicked.
+</code></pre><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li>ArrayAdapter requires the resource ID to be a TextView</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjvtpcipj000hvypi3mnsp5mv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】Retrofit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/05/【Android】Retrofit/" class="article-date">
@@ -106,7 +158,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvs9gxi8000m8dpiabq4of4g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvtpcipq000mvypihjfxfn3q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +196,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvs9gxhq00098dpifcwttchq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjvtpciol0003vypi92s9pwcr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +244,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvs9gxi3000h8dpi9mxynied" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjvtpcipk000ivypi40orjzyl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +288,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvs9gxie000s8dpiso5po4gl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjvtpciq8000xvypikraz8mc5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -273,7 +325,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvs9gxhi00048dpic4kf0jpd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjvtpcioj0002vypi6pveoi9m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +408,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvs9gxhx000c8dpi24rw06xt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjvtpcipd000dvypidawthcmy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -392,7 +444,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvs9gxib000q8dpi2y5xrx9d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/04/【Android】触摸事件/" data-id="cjvtpciq6000vvypitazplfp6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -462,7 +514,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvs9gxhz000d8dpiblangf0r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/03/【Android】Fragment/" data-id="cjvtpcipf000evypit4l3bn4h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -499,45 +551,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvs9gxh100018dpia4kpptgi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Lintcode-15-Permutations" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/01/Lintcode-15-Permutations/" class="article-date">
-  <time datetime="2019-05-01T08:34:10.000Z" itemprop="datePublished">2019-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/01/Lintcode-15-Permutations/">Lintcode.15.Permutations</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p><a href="https://www.lintcode.com/problem/permutations/description" target="_blank" rel="noopener">https://www.lintcode.com/problem/permutations/description</a></p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><pre><code>
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/01/Lintcode-15-Permutations/" data-id="cjvs9gxgv00008dpib1491sov" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/02/Java并发/" data-id="cjvtpciof0001vypixwfm1qta" class="article-share-link">Share</a>
       
       
     </footer>
@@ -583,6 +597,10 @@ public void handleSomethingElse(SomeOtherEvent event) {
       <ul>
         
           <li>
+            <a href="/2019/05/18/【Android】Activity/">【Android】Activity</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/17/【Android】ANR/">【Android】ANR</a>
           </li>
         
@@ -596,10 +614,6 @@ public void handleSomethingElse(SomeOtherEvent event) {
         
           <li>
             <a href="/2019/05/13/【Android】Content-Provider/">【Android】Content Provider</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/12/【Android】Service/">【Android】Service</a>
           </li>
         
       </ul>

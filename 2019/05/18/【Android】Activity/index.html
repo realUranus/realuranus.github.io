@@ -5,19 +5,19 @@
   
 
   
-  <title>【Android】矢量图标 | </title>
+  <title>【Android】Activity | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="官方文档https://developer.android.com/studio/write/vector-asset-studio SVG资源使用得到了xml文件后，如何使用？  布局添加矢量图  设置app:srcCompat属性 制作工具inkscape：https://inkscape.org/ 替换App图标AndroidMainfest.xml中修改android:icon属性。">
+  <meta name="description" content="官方地址https://developer.android.google.cn/guide/components/activities/intro-activities 生命周期Lifecyclehttps://developer.android.google.cn/guide/components/activities/activity-lifecycle onCreateState: Crea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Android】矢量图标">
-<meta property="og:url" content="http://yoursite.com/2019/05/08/【Android】矢量图标/index.html">
+<meta property="og:title" content="【Android】Activity">
+<meta property="og:url" content="http://yoursite.com/2019/05/18/【Android】Activity/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="官方文档https://developer.android.com/studio/write/vector-asset-studio SVG资源使用得到了xml文件后，如何使用？  布局添加矢量图  设置app:srcCompat属性 制作工具inkscape：https://inkscape.org/ 替换App图标AndroidMainfest.xml中修改android:icon属性。">
+<meta property="og:description" content="官方地址https://developer.android.google.cn/guide/components/activities/intro-activities 生命周期Lifecyclehttps://developer.android.google.cn/guide/components/activities/activity-lifecycle onCreateState: Crea">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T13:32:20.858Z">
+<meta property="og:updated_time" content="2019-05-18T13:44:59.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Android】矢量图标">
-<meta name="twitter:description" content="官方文档https://developer.android.com/studio/write/vector-asset-studio SVG资源使用得到了xml文件后，如何使用？  布局添加矢量图  设置app:srcCompat属性 制作工具inkscape：https://inkscape.org/ 替换App图标AndroidMainfest.xml中修改android:icon属性。">
+<meta name="twitter:title" content="【Android】Activity">
+<meta name="twitter:description" content="官方地址https://developer.android.google.cn/guide/components/activities/intro-activities 生命周期Lifecyclehttps://developer.android.google.cn/guide/components/activities/activity-lifecycle onCreateState: Crea">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,10 +54,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-【Android】矢量图标" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【Android】Activity" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/08/【Android】矢量图标/" class="article-date">
-  <time datetime="2019-05-08T12:48:04.000Z" itemprop="datePublished">2019-05-08</time>
+    <a href="/2019/05/18/【Android】Activity/" class="article-date">
+  <time datetime="2019-05-18T09:18:03.000Z" itemprop="datePublished">2019-05-18</time>
 </a>
     
   </div>
@@ -68,7 +68,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      【Android】矢量图标
+      【Android】Activity
     </h1>
   
 
@@ -76,19 +76,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h4><p><a href="https://developer.android.com/studio/write/vector-asset-studio" target="_blank" rel="noopener">https://developer.android.com/studio/write/vector-asset-studio</a></p>
-<h4 id="SVG资源使用"><a href="#SVG资源使用" class="headerlink" title="SVG资源使用"></a>SVG资源使用</h4><p>得到了xml文件后，如何使用？</p>
-<ul>
-<li>布局添加矢量图</li>
-</ul>
-<p>设置app:srcCompat属性</p>
-<h4 id="制作工具"><a href="#制作工具" class="headerlink" title="制作工具"></a>制作工具</h4><p>inkscape：<a href="https://inkscape.org/" target="_blank" rel="noopener">https://inkscape.org/</a></p>
-<h4 id="替换App图标"><a href="#替换App图标" class="headerlink" title="替换App图标"></a>替换App图标</h4><p>AndroidMainfest.xml中修改android:icon属性。</p>
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/guide/components/activities/intro-activities" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/intro-activities</a></p>
+<h4 id="生命周期Lifecycle"><a href="#生命周期Lifecycle" class="headerlink" title="生命周期Lifecycle"></a>生命周期Lifecycle</h4><p><a href="https://developer.android.google.cn/guide/components/activities/activity-lifecycle" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/activity-lifecycle</a></p>
+<h5 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate"></a>onCreate</h5><p>State: Created<br>Work: perform basic application startup logic that should happen only once for the entire life of the activity. </p>
+<h5 id="onStart"><a href="#onStart" class="headerlink" title="onStart"></a>onStart</h5><p>State: *Started 可见，为可交互做准备<br>Work: makes the activity visible to the user**</p>
+<h5 id="onResume"><a href="#onResume" class="headerlink" title="onResume"></a>onResume</h5><p>State: Resumed 可交互的<br>Work: This is the state in which the app interacts with the user</p>
+<h5 id="onPause"><a href="#onPause" class="headerlink" title="onPause"></a>onPause</h5><p>State: Paused<br>it indicates that the activity is no longer in the foreground 不在前台，不代表被销毁了。</p>
+<h5 id="onStop"><a href="#onStop" class="headerlink" title="onStop"></a>onStop</h5><p>State: Stopped</p>
+<p>no longer visible to the user</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/08/【Android】矢量图标/" data-id="cjvtpcipu000pvypiziaentx8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/18/【Android】Activity/" data-id="cjvtpcioq0006vypibr5i4btr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -97,19 +97,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/05/09/【Android】BroadcastReceiver/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          【Android】BroadcastReceiver
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/07/【Android】RecyclerView/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/17/【Android】ANR/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">【Android】RecyclerView</div>
+      <div class="article-nav-title">【Android】ANR</div>
     </a>
   
 </nav>
