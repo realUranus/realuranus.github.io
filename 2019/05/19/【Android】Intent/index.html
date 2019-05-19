@@ -5,19 +5,19 @@
   
 
   
-  <title>【Android】Picasso | </title>
+  <title>【Android】Intent | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本使用Picasso.get().load(&amp;quot;http://i.imgur.com/DvpvklR.png&amp;quot;).into(imageView); 自定义 继承Transformation类  导入：import com.squareup.picasso.Transformation;  重写transform和key方法  问题 java.lang.RuntimeExcept">
+  <meta name="description" content="官方地址https://developer.android.google.cn/reference/android/content/Intent 简介An intent is an abstract description of an operation to be performed. 是一种操作描述。 Its most significant use is in the launching o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Android】Picasso">
-<meta property="og:url" content="http://yoursite.com/2019/05/09/【Android】Picasso/index.html">
+<meta property="og:title" content="【Android】Intent">
+<meta property="og:url" content="http://yoursite.com/2019/05/19/【Android】Intent/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="基本使用Picasso.get().load(&amp;quot;http://i.imgur.com/DvpvklR.png&amp;quot;).into(imageView); 自定义 继承Transformation类  导入：import com.squareup.picasso.Transformation;  重写transform和key方法  问题 java.lang.RuntimeExcept">
+<meta property="og:description" content="官方地址https://developer.android.google.cn/reference/android/content/Intent 简介An intent is an abstract description of an operation to be performed. 是一种操作描述。 Its most significant use is in the launching o">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T08:45:41.780Z">
+<meta property="og:updated_time" content="2019-05-19T05:15:07.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Android】Picasso">
-<meta name="twitter:description" content="基本使用Picasso.get().load(&amp;quot;http://i.imgur.com/DvpvklR.png&amp;quot;).into(imageView); 自定义 继承Transformation类  导入：import com.squareup.picasso.Transformation;  重写transform和key方法  问题 java.lang.RuntimeExcept">
+<meta name="twitter:title" content="【Android】Intent">
+<meta name="twitter:description" content="官方地址https://developer.android.google.cn/reference/android/content/Intent 简介An intent is an abstract description of an operation to be performed. 是一种操作描述。 Its most significant use is in the launching o">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,10 +54,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-【Android】Picasso" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【Android】Intent" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/09/【Android】Picasso/" class="article-date">
-  <time datetime="2019-05-09T07:11:54.000Z" itemprop="datePublished">2019-05-09</time>
+    <a href="/2019/05/19/【Android】Intent/" class="article-date">
+  <time datetime="2019-05-19T04:46:00.000Z" itemprop="datePublished">2019-05-19</time>
 </a>
     
   </div>
@@ -68,7 +68,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      【Android】Picasso
+      【Android】Intent
     </h1>
   
 
@@ -76,23 +76,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><pre><code>Picasso.get().load(&quot;http://i.imgur.com/DvpvklR.png&quot;).into(imageView);
-</code></pre><h4 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h4><ul>
-<li>继承Transformation类</li>
-</ul>
-<p>导入：import com.squareup.picasso.Transformation;</p>
-<ul>
-<li>重写transform和key方法</li>
-</ul>
-<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
-<li>java.lang.RuntimeException: Canvas: trying to draw too large(203212800bytes) bitmap.</li>
-</ul>
-<p>图片太大了。</p>
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/reference/android/content/Intent" target="_blank" rel="noopener">https://developer.android.google.cn/reference/android/content/Intent</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>An intent is an abstract description of an operation to be performed.</p>
+<p>是一种操作描述。</p>
+<p>Its most significant use is in the launching of activities, where it can be thought of as the glue between activities.</p>
+<p>最重要的用处是：启动activity</p>
+<h4 id="构造-Structure"><a href="#构造-Structure" class="headerlink" title="构造 Structure"></a>构造 Structure</h4><h4 id="解析-Resolution"><a href="#解析-Resolution" class="headerlink" title="解析 Resolution"></a>解析 Resolution</h4><h4 id="标准Activity动作"><a href="#标准Activity动作" class="headerlink" title="标准Activity动作"></a>标准Activity动作</h4><p>最重要使用最频繁的是：ACTION_MAIN_和ACTION___EDIT</p>
+<h4 id="标准Broadcast动作"><a href="#标准Broadcast动作" class="headerlink" title="标准Broadcast动作"></a>标准Broadcast动作</h4><h4 id="数据大小限制"><a href="#数据大小限制" class="headerlink" title="数据大小限制"></a>数据大小限制</h4><p>大小：1MB</p>
+<p>原因：Intent传递数据的时候，使用到了Binder。</p>
+<p>The Binder transaction buffer has a limited fixed size, currently 1Mb, which is shared by all transactions in progress for the process.</p>
+<p>解决方式：EventBus</p>
+<p>ref：<a href="http://zhuanlan.51cto.com/art/201904/595100.htm" target="_blank" rel="noopener">http://zhuanlan.51cto.com/art/201904/595100.htm</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/【Android】Picasso/" data-id="cjvv3y4b4000km3pimdltk925" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/19/【Android】Intent/" data-id="cjvv3y4b7000nm3piowbl2gxa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,19 +100,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/05/09/SwipeRefreshLayout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          SwipeRefreshLayout
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/09/【Android】BroadcastReceiver/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/05/18/【Android】Activity/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">【Android】BroadcastReceiver</div>
+      <div class="article-nav-title">【Android】Activity</div>
     </a>
   
 </nav>

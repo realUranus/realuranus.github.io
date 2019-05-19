@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/05/03/%E3%80%90Android%E3%80%91Fragment/</loc>
+    
+    <lastmod>2019-05-19T13:53:35.932Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/05/05/%E3%80%90Android%E3%80%91Retrofit/</loc>
+    
+    <lastmod>2019-05-19T13:39:10.027Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/05/19/%E3%80%90Android%E3%80%91Intent/</loc>
+    
+    <lastmod>2019-05-19T05:15:07.610Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/18/%E3%80%90Android%E3%80%91Activity/</loc>
     
     <lastmod>2019-05-18T13:44:59.394Z</lastmod>
@@ -142,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/05/05/%E3%80%90Android%E3%80%91Retrofit/</loc>
-    
-    <lastmod>2019-05-07T05:41:57.022Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2019/05/06/%E3%80%90Android%E3%80%91HandlerThread/</loc>
     
     <lastmod>2019-05-06T14:25:06.912Z</lastmod>
@@ -201,13 +215,6 @@
     <loc>http://yoursite.com/2019/05/04/%E3%80%90Android%E3%80%91%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/</loc>
     
     <lastmod>2019-05-03T16:27:57.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/03/%E3%80%90Android%E3%80%91Fragment/</loc>
-    
-    <lastmod>2019-05-03T10:06:28.538Z</lastmod>
     
   </url>
   

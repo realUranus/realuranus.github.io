@@ -14,7 +14,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="github 地址https://square.github.io/retrofit/https://github.com/square/retrofit 引入官方： implementation &amp;#39;com.squareup.retrofit2:retrofit:(insert latest version)&amp;#39; 然后替换下版本： implementation &amp;#39;com.sq">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-07T05:41:57.022Z">
+<meta property="og:updated_time" content="2019-05-19T13:39:10.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】Retrofit">
 <meta name="twitter:description" content="github 地址https://square.github.io/retrofit/https://github.com/square/retrofit 引入官方： implementation &amp;#39;com.squareup.retrofit2:retrofit:(insert latest version)&amp;#39; 然后替换下版本： implementation &amp;#39;com.sq">
@@ -82,12 +82,22 @@
 </code></pre><p>然后替换下版本：</p>
 <pre><code>implementation &#39;com.squareup.retrofit2:retrofit:2.0.0&#39;
 </code></pre><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>使用<strong>注解</strong>来简化Http请求</p>
+<h4 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h4><ul>
+<li>引入</li>
+<li>创建接收bean</li>
+<li>创建请求接口</li>
+<li>创建retrofit实例</li>
+<li>创建请求实例</li>
+<li>请求</li>
+<li>解析数据</li>
+</ul>
 <h4 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h4><p>官方示例</p>
 <pre><code>public interface GitHubService {
   @GET(&quot;users/{user}/repos&quot;)
   Call&lt;List&lt;Repo&gt;&gt; listRepos(@Path(&quot;user&quot;) String user);
 }
 </code></pre><p>其中：</p>
+<p>括号里面的表示路径，和baseurl组合成为完整的路径。</p>
 <h4 id="生成接口的实现"><a href="#生成接口的实现" class="headerlink" title="生成接口的实现"></a>生成接口的实现</h4><pre><code>Retrofit retrofit = new Retrofit.Builder()
     .baseUrl(&quot;https://api.github.com/&quot;)
     .build();
@@ -108,7 +118,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvtpcipn000kvzpig76ayulq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjvv3y4b6000mm3pigorhkd2t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,6 +176,10 @@ GitHubService service = retrofit.create(GitHubService.class);
       <ul>
         
           <li>
+            <a href="/2019/05/19/【Android】Intent/">【Android】Intent</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/18/【Android】Activity/">【Android】Activity</a>
           </li>
         
@@ -179,10 +193,6 @@ GitHubService service = retrofit.create(GitHubService.class);
         
           <li>
             <a href="/2019/05/14/【Android】Broadcast/">【Android】Broadcast</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/13/【Android】Content-Provider/">【Android】Content Provider</a>
           </li>
         
       </ul>
