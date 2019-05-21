@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/05/18/%E3%80%90Android%E3%80%91Activity/</loc>
+    
+    <lastmod>2019-05-21T15:38:08.705Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/03/%E3%80%90Android%E3%80%91Fragment/</loc>
     
     <lastmod>2019-05-19T13:53:35.932Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2019/05/19/%E3%80%90Android%E3%80%91Intent/</loc>
     
     <lastmod>2019-05-19T05:15:07.610Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/18/%E3%80%90Android%E3%80%91Activity/</loc>
-    
-    <lastmod>2019-05-18T13:44:59.394Z</lastmod>
     
   </url>
   
