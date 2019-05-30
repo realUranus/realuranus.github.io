@@ -52,6 +52,96 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】Custom-View-Components" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/10/【Android】Custom-View-Components/" class="article-date">
+  <time datetime="2019-05-10T13:50:53.000Z" itemprop="datePublished">2019-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/【Android】Custom-View-Components/">【Android】Custom View Components</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/guide/topics/ui/custom-components" target="_blank" rel="noopener">https://developer.android.com/guide/topics/ui/custom-components</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>Android offers a sophisticated and powerful componentized model for building your UI, based on the fundamental layout classes: View and ViewGroup.
+</code></pre><h4 id="基本自定义"><a href="#基本自定义" class="headerlink" title="基本自定义"></a>基本自定义</h4><ul>
+<li>定义layout文件</li>
+<li>继承View类</li>
+<li>重写onDraw</li>
+</ul>
+<h4 id="关于ViewGroup"><a href="#关于ViewGroup" class="headerlink" title="关于ViewGroup"></a>关于ViewGroup</h4><p><a href="https://developer.android.com/reference/android/view/ViewGroup" target="_blank" rel="noopener">https://developer.android.com/reference/android/view/ViewGroup</a></p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/10/【Android】Custom-View-Components/" data-id="cjwatnwk8000ads9p57xyi8dn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-【Android】ViewModel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/10/【Android】ViewModel/" class="article-date">
+  <time datetime="2019-05-10T07:29:38.000Z" itemprop="datePublished">2019-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/【Android】ViewModel/">【Android】ViewModel</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/topic/libraries/architecture/viewmodel" target="_blank" rel="noopener">https://developer.android.google.cn/topic/libraries/architecture/viewmodel</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way.（ViewModel用来存储和处理UI有关的数据）
+
+If the system destroys or re-creates a UI controller, any transient UI-related data you store in them is lost. （问题：如果系统异常，那么UI里面的数据就丢失了。）
+
+Another problem is that UI controllers frequently need to make asynchronous calls that may take some time to return. The UI controller needs to manage these calls and ensure the system cleans them up after it&#39;s destroyed to avoid potential memory leaks. （问题：UI控制器要频繁地做异步请求）
+
+UI controllers such as activities and fragments are primarily intended to display UI data, react to user actions, or handle operating system communication, such as permission requests. （UI控制器要做的事情太多了）
+</code></pre><h4 id="实现一个ViewModel"><a href="#实现一个ViewModel" class="headerlink" title="实现一个ViewModel"></a>实现一个ViewModel</h4><pre><code>If the activity is re-created, it receives the same MyViewModel instance that was created by the first activity. 
+</code></pre><h4 id="ViewModel的生命周期"><a href="#ViewModel的生命周期" class="headerlink" title="ViewModel的生命周期"></a>ViewModel的生命周期</h4><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p><a href="https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e" target="_blank" rel="noopener">https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/10/【Android】ViewModel/" data-id="cjwatnwkp000ods9pls9bnz11" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】LiveData" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/10/【Android】LiveData/" class="article-date">
@@ -80,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】LiveData/" data-id="cjvzdzt5d000k2x9pwwd2jmcq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/【Android】LiveData/" data-id="cjwatnwm5000yds9pd3ajlrxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】DataBinding/" data-id="cjvzdzt56000e2x9pa9t17put" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/【Android】DataBinding/" data-id="cjwatnwkf000dds9pudzfxks4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/SwipeRefreshLayout/" data-id="cjvzdzt4f00052x9pdxpzla27" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/09/SwipeRefreshLayout/" data-id="cjwatnwk20005ds9p3l5y4s9t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/【Android】Picasso/" data-id="cjvzdzt5e000l2x9pq5wuzap6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/09/【Android】Picasso/" data-id="cjwatnwma000zds9pfsgckgl9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/【Android】BroadcastReceiver/" data-id="cjvzdzt4r00092x9p2salbv7f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/09/【Android】BroadcastReceiver/" data-id="cjwatnwk50008ds9prwbusjze" class="article-share-link">Share</a>
       
       
     </footer>
@@ -301,7 +391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/08/【Android】矢量图标/" data-id="cjvzdzt5y000x2x9pnfjrhcng" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/08/【Android】矢量图标/" data-id="cjwatnwks000qds9pcrj36usx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -396,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/07/【Android】RecyclerView/" data-id="cjvzdzt5f000m2x9p8k1vig65" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/07/【Android】RecyclerView/" data-id="cjwatnwma0010ds9pg6df5oyk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -433,83 +523,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/07/【Android】gson/" data-id="cjvzdzt5t000t2x9pr3exznqq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Android】HandlerThread" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/06/【Android】HandlerThread/" class="article-date">
-  <time datetime="2019-05-06T14:18:25.000Z" itemprop="datePublished">2019-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/06/【Android】HandlerThread/">【Android】HandlerThread</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/reference/android/os/HandlerThread" target="_blank" rel="noopener">https://developer.android.com/reference/android/os/HandlerThread</a></p>
-<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><pre><code>A Thread that has a Looper.
-</code></pre><h4 id="为什么使用HandlerThread"><a href="#为什么使用HandlerThread" class="headerlink" title="为什么使用HandlerThread"></a>为什么使用HandlerThread</h4><p><a href="https://stackoverflow.com/questions/10712959/why-use-handlerthread-in-android" target="_blank" rel="noopener">https://stackoverflow.com/questions/10712959/why-use-handlerthread-in-android</a></p>
-<pre><code>You would use HandlerThread in case that you want to perform background tasks one at a time and you want that those tasks will run at the order of execution.
-</code></pre><h4 id="使用过程"><a href="#使用过程" class="headerlink" title="使用过程"></a>使用过程</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Android】HandlerThread/" data-id="cjvzdzt58000g2x9pjpk76ti8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Java】设计模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/06/【Java】设计模式/" class="article-date">
-  <time datetime="2019-05-06T14:04:47.000Z" itemprop="datePublished">2019-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/06/【Java】设计模式/">【Java】设计模式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Java】设计模式/" data-id="cjvzdzt5v000v2x9pjhi9hcjh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/07/【Android】gson/" data-id="cjwatnwkr000pds9pqqfrdywy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -555,6 +569,14 @@
       <ul>
         
           <li>
+            <a href="/2019/05/30/【Android】自定义View/">【Android】自定义View</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/30/【Java】List/">【Java】List</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/19/【Android】Intent/">【Android】Intent</a>
           </li>
         
@@ -564,14 +586,6 @@
         
           <li>
             <a href="/2019/05/17/【Android】ANR/">【Android】ANR</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/15/【Design-Pattern】Publish-Subscribe-Pattern/">【Design Pattern】Publish/Subscribe Pattern</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/14/【Android】Broadcast/">【Android】Broadcast</a>
           </li>
         
       </ul>
