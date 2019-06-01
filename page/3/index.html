@@ -52,6 +52,182 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】矢量图标" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/08/【Android】矢量图标/" class="article-date">
+  <time datetime="2019-05-08T12:48:04.000Z" itemprop="datePublished">2019-05-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/08/【Android】矢量图标/">【Android】矢量图标</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h4><p><a href="https://developer.android.com/studio/write/vector-asset-studio" target="_blank" rel="noopener">https://developer.android.com/studio/write/vector-asset-studio</a></p>
+<h4 id="SVG资源使用"><a href="#SVG资源使用" class="headerlink" title="SVG资源使用"></a>SVG资源使用</h4><p>得到了xml文件后，如何使用？</p>
+<ul>
+<li>布局添加矢量图</li>
+</ul>
+<p>设置app:srcCompat属性</p>
+<h4 id="制作工具"><a href="#制作工具" class="headerlink" title="制作工具"></a>制作工具</h4><p>inkscape：<a href="https://inkscape.org/" target="_blank" rel="noopener">https://inkscape.org/</a></p>
+<h4 id="替换App图标"><a href="#替换App图标" class="headerlink" title="替换App图标"></a>替换App图标</h4><p>AndroidMainfest.xml中修改android:icon属性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/08/【Android】矢量图标/" data-id="cjwdoilzs000qq79po1s3lqlo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-【Android】RecyclerView" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/07/【Android】RecyclerView/" class="article-date">
+  <time datetime="2019-05-07T14:23:54.000Z" itemprop="datePublished">2019-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/【Android】RecyclerView/">【Android】RecyclerView</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/guide/topics/ui/layout/recyclerview" target="_blank" rel="noopener">https://developer.android.google.cn/guide/topics/ui/layout/recyclerview</a></p>
+<p><a href="https://developer.android.com/reference/android/support/v7/widget/RecyclerView" target="_blank" rel="noopener">https://developer.android.com/reference/android/support/v7/widget/RecyclerView</a></p>
+<h4 id="官方示例"><a href="#官方示例" class="headerlink" title="官方示例"></a>官方示例</h4><p><a href="https://github.com/googlesamples/android-RecyclerView/" target="_blank" rel="noopener">https://github.com/googlesamples/android-RecyclerView/</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><h4 id="添加依赖库"><a href="#添加依赖库" class="headerlink" title="添加依赖库"></a>添加依赖库</h4><pre><code>implementation &#39;com.android.support:recyclerview-v7:28.0.0&#39;
+
+</code></pre><h4 id="LayoutManager"><a href="#LayoutManager" class="headerlink" title="LayoutManager"></a>LayoutManager</h4><p>Adapter<br>数据和UI的桥梁。</p>
+<p>ViewHolder</p>
+<p>LayoutManager</p>
+<p>ItemDecoration</p>
+<p>ItemAnimator</p>
+<h4 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h4><h4 id="ViewHolder"><a href="#ViewHolder" class="headerlink" title="ViewHolder"></a>ViewHolder</h4><pre><code>The views in the list are represented by view holder objects. These objects are instances of a class you define by extending RecyclerView.ViewHolder.
+列表里的view是继承自RecyclerView.ViewHolder的自定义的一个类。
+</code></pre><p>定义示例：</p>
+<pre><code>public static class MyViewHolder extends RecyclerView.ViewHolder
+</code></pre><ul>
+<li>onCreateViewHolder</li>
+</ul>
+<p>创建新的view。</p>
+<ul>
+<li>view的布局文件</li>
+</ul>
+<p>布局文件是LayoutInflater使用的。</p>
+<ul>
+<li>onBindViewHolder</li>
+</ul>
+<p>替换view的内容。参数提供的viewholder就是自定义的类的实例。直接获取里面的元素就可以进行操作。</p>
+<h4 id="布局文件添加组件"><a href="#布局文件添加组件" class="headerlink" title="布局文件添加组件"></a>布局文件添加组件</h4><h4 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h4><pre><code>If the list needs an update, call a notification method on the RecyclerView.Adapter object, such as notifyItemChanged(). 
+</code></pre><p>如果需要更新数据，要调用adapter的notifyItemChanged()方法。</p>
+<h4 id="View里面增加图片"><a href="#View里面增加图片" class="headerlink" title="View里面增加图片"></a>View里面增加图片</h4><ul>
+<li>参考</li>
+</ul>
+<p><a href="https://www.learn2crack.com/2016/02/image-loading-recyclerview-picasso.html" target="_blank" rel="noopener">https://www.learn2crack.com/2016/02/image-loading-recyclerview-picasso.html</a></p>
+<ul>
+<li><p>布局添加ImageView并且设置id</p>
+</li>
+<li><p>在onBindViewHolder方法里，取出数据然后加载图片</p>
+</li>
+</ul>
+<p>使用Picasso框架加载图片：</p>
+<h4 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h4><ul>
+<li>布局文件中增加组件</li>
+<li>ViewHolder类中获取组件</li>
+</ul>
+<h4 id="点击事件"><a href="#点击事件" class="headerlink" title="点击事件"></a>点击事件</h4><p>参考：<a href="http://www.sapandiwakar.in/recycler-view-item-click-handler/" target="_blank" rel="noopener">http://www.sapandiwakar.in/recycler-view-item-click-handler/</a></p>
+<p>RecyclerView提供了OnItemTouchListener，可以通过实现这个接口，然后addOnItemTouchListener来响应事件。</p>
+<ul>
+<li>onTouchEvent</li>
+<li>onRequestDisallowInterceptTouchEvent</li>
+<li>onInterceptTouchEvent</li>
+</ul>
+<h4 id="监听滑动"><a href="#监听滑动" class="headerlink" title="监听滑动"></a>监听滑动</h4><ul>
+<li><p>onScrollStateChanged</p>
+</li>
+<li><p>onScrolled</p>
+</li>
+</ul>
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li>android.support.constraint.ConstraintLayout cannot be cast to android.widget.TextView<br>clean项目。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/07/【Android】RecyclerView/" data-id="cjwdoilzh000mq79p6ujxjcgm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-【Android】gson" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/07/【Android】gson/" class="article-date">
+  <time datetime="2019-05-07T06:24:54.000Z" itemprop="datePublished">2019-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/【Android】gson/">【Android】gson</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/google/gson" target="_blank" rel="noopener">https://github.com/google/gson</a></p>
+<h4 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/07/【Android】gson/" data-id="cjwdoilzt000rq79pw0mlm3ag" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Android】HandlerThread" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/06/【Android】HandlerThread/" class="article-date">
@@ -82,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Android】HandlerThread/" data-id="cjwc326my000ike9ph8i2obc4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/【Android】HandlerThread/" data-id="cjwdoilzc000hq79pbpcwd8x4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,7 +294,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/【Java】设计模式/" data-id="cjwc326nt0010ke9pn4qx9kot" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/【Java】设计模式/" data-id="cjwdoim0d000zq79phyle8waz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Handler/" data-id="cjwc326mz000jke9pbxnjn1ui" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Handler/" data-id="cjwdoilzb000gq79pq3gmda3x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjwc326n1000lke9pdrl8hdbn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】ListView/" data-id="cjwdoilze000jq79piuvng1eb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -284,7 +460,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjwc326nc000pke9pecrhplm7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Retrofit/" data-id="cjwdoim01000vq79p4im8u7d7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,7 +498,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjwc326m90004ke9pvt8xfbci" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/Lintcode-669-Coin-Change/" data-id="cjwdoilym0004q79p8oqz3bk4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -370,171 +546,7 @@ GitHubService service = retrofit.create(GitHubService.class);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjwc326ms000dke9pxpaieiqc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Java】jsoup" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/04/【Java】jsoup/" class="article-date">
-  <time datetime="2019-05-04T15:59:51.000Z" itemprop="datePublished">2019-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/【Java】jsoup/">【Java】jsoup</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h4><p><a href="https://jsoup.org/" target="_blank" rel="noopener">https://jsoup.org/</a></p>
-<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p><a href="https://github.com/jhy/jsoup/" target="_blank" rel="noopener">https://github.com/jhy/jsoup/</a></p>
-<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><pre><code>implementation &#39;org.jsoup:jsoup:1.11.3&#39;
-</code></pre><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><a href="https://jsoup.org/cookbook/" target="_blank" rel="noopener">https://jsoup.org/cookbook/</a></p>
-<ul>
-<li>Load a Document from a URL</li>
-</ul>
-<h4 id="获取想要的元素"><a href="#获取想要的元素" class="headerlink" title="获取想要的元素"></a>获取想要的元素</h4><p>主要是用document的select方法：</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Java】jsoup/" data-id="cjwc326nt000zke9pxiuczij8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Lintcode-17-Subsets" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/04/Lintcode-17-Subsets/" class="article-date">
-  <time datetime="2019-05-04T13:28:47.000Z" itemprop="datePublished">2019-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/Lintcode-17-Subsets/">Lintcode.17.Subsets</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p><a href="https://www.lintcode.com/problem/subsets/description" target="_blank" rel="noopener">https://www.lintcode.com/problem/subsets/description</a></p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/Lintcode-17-Subsets/" data-id="cjwc326ma0005ke9p4p86bvyb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Android】EventBus" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/04/【Android】EventBus/" class="article-date">
-  <time datetime="2019-05-04T08:08:44.000Z" itemprop="datePublished">2019-05-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/【Android】EventBus/">【Android】EventBus</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
-<h4 id="三个要素"><a href="#三个要素" class="headerlink" title="三个要素"></a>三个要素</h4><ul>
-<li>事件Event</li>
-<li>订阅者Subscriber</li>
-<li>发布者Publisher</li>
-</ul>
-<h4 id="三步使用（和三个要素也是对应的）"><a href="#三步使用（和三个要素也是对应的）" class="headerlink" title="三步使用（和三个要素也是对应的）"></a>三步使用（和三个要素也是对应的）</h4><ul>
-<li>Define events</li>
-<li>Prepare subscribers</li>
-<li>Post events</li>
-</ul>
-<h4 id="文档解读"><a href="#文档解读" class="headerlink" title="文档解读"></a>文档解读</h4><p>文档地址：<a href="http://greenrobot.org/eventbus/documentation/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/</a></p>
-<ul>
-<li>How to get started</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/how-to-get-started/</a></p>
-<p>事件定义（事件是POJO）：</p>
-<pre><code>public class MessageEvent {
-
-    public final String message;
-
-    public MessageEvent(String message) {
-        this.message = message;
-    }
-}
-</code></pre><p>准备订阅者：</p>
-<pre><code>// This method will be called when a MessageEvent is posted (in the UI thread for Toast)
-@Subscribe(threadMode = ThreadMode.MAIN)
-public void onMessageEvent(MessageEvent event) {
-    Toast.makeText(getActivity(), event.message, Toast.LENGTH_SHORT).show();
-}
-
-// This method will be called when a SomeOtherEvent is posted
-@Subscribe
-public void handleSomethingElse(SomeOtherEvent event) {
-    doSomethingWith(event);
-}
-</code></pre><p>发布事件</p>
-<pre><code>EventBus.getDefault().post(new MessageEvent(&quot;Hello everyone!&quot;));
-</code></pre><ul>
-<li>Delivery Threads (ThreadMode)</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/delivery-threads-threadmode/</a></p>
-<ul>
-<li>Configuration</li>
-</ul>
-<p>地址：<a href="http://greenrobot.org/eventbus/documentation/configuration/" target="_blank" rel="noopener">http://greenrobot.org/eventbus/documentation/configuration/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/04/【Android】EventBus/" data-id="cjwc326mw000gke9p36yxnvrl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/05/【Android】Data-Storage数据存储/" data-id="cjwdoilz3000bq79pckg5puva" class="article-share-link">Share</a>
       
       
     </footer>
@@ -567,7 +579,7 @@ public void handleSomethingElse(SomeOtherEvent event) {
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -580,23 +592,23 @@ public void handleSomethingElse(SomeOtherEvent event) {
       <ul>
         
           <li>
+            <a href="/2019/06/01/【Flutter】widget/">【Flutter】widget</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/01/【Flutter】布局/">【Flutter】布局</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/01/【Android】Gradle管理/">【Android】Gradle管理</a>
+          </li>
+        
+          <li>
             <a href="/2019/05/30/【Android】自定义View/">【Android】自定义View</a>
           </li>
         
           <li>
             <a href="/2019/05/30/【Java】List/">【Java】List</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/19/【Android】Intent/">【Android】Intent</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/18/【Android】Activity/">【Android】Activity</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/17/【Android】ANR/">【Android】ANR</a>
           </li>
         
       </ul>
