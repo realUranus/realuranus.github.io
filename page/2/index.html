@@ -52,6 +52,147 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-【Android】Intent" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/19/【Android】Intent/" class="article-date">
+  <time datetime="2019-05-19T04:46:00.000Z" itemprop="datePublished">2019-05-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/19/【Android】Intent/">【Android】Intent</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/reference/android/content/Intent" target="_blank" rel="noopener">https://developer.android.google.cn/reference/android/content/Intent</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>An intent is an abstract description of an operation to be performed.</p>
+<p>是一种操作描述。</p>
+<p>Its most significant use is in the launching of activities, where it can be thought of as the glue between activities.</p>
+<p>最重要的用处是：启动activity</p>
+<h4 id="构造-Structure"><a href="#构造-Structure" class="headerlink" title="构造 Structure"></a>构造 Structure</h4><h4 id="解析-Resolution"><a href="#解析-Resolution" class="headerlink" title="解析 Resolution"></a>解析 Resolution</h4><h4 id="标准Activity动作"><a href="#标准Activity动作" class="headerlink" title="标准Activity动作"></a>标准Activity动作</h4><p>最重要使用最频繁的是：ACTION_MAIN_和ACTION___EDIT</p>
+<h4 id="标准Broadcast动作"><a href="#标准Broadcast动作" class="headerlink" title="标准Broadcast动作"></a>标准Broadcast动作</h4><h4 id="数据大小限制"><a href="#数据大小限制" class="headerlink" title="数据大小限制"></a>数据大小限制</h4><p>大小：1MB</p>
+<p>原因：Intent传递数据的时候，使用到了Binder。</p>
+<p>The Binder transaction buffer has a limited fixed size, currently 1Mb, which is shared by all transactions in progress for the process.</p>
+<p>解决方式：EventBus</p>
+<p>ref：<a href="http://zhuanlan.51cto.com/art/201904/595100.htm" target="_blank" rel="noopener">http://zhuanlan.51cto.com/art/201904/595100.htm</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/19/【Android】Intent/" data-id="cjxzp0tdm000i5a9pgs5tanyo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-【Android】Activity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/18/【Android】Activity/" class="article-date">
+  <time datetime="2019-05-18T09:18:03.000Z" itemprop="datePublished">2019-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/18/【Android】Activity/">【Android】Activity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/guide/components/activities/intro-activities" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/intro-activities</a></p>
+<h4 id="生命周期Lifecycle"><a href="#生命周期Lifecycle" class="headerlink" title="生命周期Lifecycle"></a>生命周期Lifecycle</h4><p><a href="https://developer.android.google.cn/guide/components/activities/activity-lifecycle" target="_blank" rel="noopener">https://developer.android.google.cn/guide/components/activities/activity-lifecycle</a></p>
+<h5 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate"></a>onCreate</h5><p>State: Created<br>Work: perform basic application startup logic that should happen only once for the entire life of the activity. </p>
+<h5 id="onStart"><a href="#onStart" class="headerlink" title="onStart"></a>onStart</h5><p>State: *Started 可见，为可交互做准备<br>Work: makes the activity visible to the user**</p>
+<h5 id="onResume"><a href="#onResume" class="headerlink" title="onResume"></a>onResume</h5><p>State: Resumed 可交互的<br>Work: This is the state in which the app interacts with the user</p>
+<h5 id="onPause"><a href="#onPause" class="headerlink" title="onPause"></a>onPause</h5><p>State: Paused<br>it indicates that the activity is no longer in the foreground 不在前台，不代表被销毁了。</p>
+<h5 id="onStop"><a href="#onStop" class="headerlink" title="onStop"></a>onStop</h5><p>State: Stopped</p>
+<p>no longer visible to the user</p>
+<h4 id="从BroadcastReceiver启动activity"><a href="#从BroadcastReceiver启动activity" class="headerlink" title="从BroadcastReceiver启动activity"></a>从BroadcastReceiver启动activity</h4><p>如果不是从activity启动的话，没有已经存在的task来存放这个activity，就要新建task。</p>
+<p>there is no existing task in which to place the new activity and thus it needs to be placed<br>in its own separate task.</p>
+<h4 id="从Service启动Activity"><a href="#从Service启动Activity" class="headerlink" title="从Service启动Activity"></a>从Service启动Activity</h4><h4 id="onAtivityResult"><a href="#onAtivityResult" class="headerlink" title="onAtivityResult"></a>onAtivityResult</h4><ul>
+<li>使用<br>startActivityForResult  onActivityResult</li>
+</ul>
+<p>-为什么不做成Callback？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/18/【Android】Activity/" data-id="cjxzp0td6000a5a9pxf4maqrj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-【Android】ANR" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/17/【Android】ANR/" class="article-date">
+  <time datetime="2019-05-17T12:55:12.000Z" itemprop="datePublished">2019-05-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/17/【Android】ANR/">【Android】ANR</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.google.cn/topic/performance/vitals/anr" target="_blank" rel="noopener">https://developer.android.google.cn/topic/performance/vitals/anr</a></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>ANR = Application Not Responding</p>
+<p>情景：</p>
+<ul>
+<li>app has not responded to an input event or BroadcastReceiver within 5 seconds</li>
+<li>While you do not have an activity in the foreground, your BroadcastReceiver hasn’t finished executing within a considerable amount of time.</li>
+</ul>
+<h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>/data/anr/traces.txt</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/17/【Android】ANR/" data-id="cjxzp0tdi000g5a9pfsr6u8f7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-【Design-Pattern】Publish-Subscribe-Pattern" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/15/【Design-Pattern】Publish-Subscribe-Pattern/" class="article-date">
@@ -81,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/15/【Design-Pattern】Publish-Subscribe-Pattern/" data-id="cjwi0u3l4000ysz9px47426l8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/15/【Design-Pattern】Publish-Subscribe-Pattern/" data-id="cjxzp0te6000v5a9pva70v5wi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/14/【Android】Broadcast/" data-id="cjwi0u3k0000asz9p3o3iyi7r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/14/【Android】Broadcast/" data-id="cjxzp0td400095a9pg54q0s0e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/13/【Android】Content-Provider/" data-id="cjwi0u3k4000csz9p5u1539vw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/13/【Android】Content-Provider/" data-id="cjxzp0tdk000h5a9poteb5gzd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/12/【Android】Service/" data-id="cjwi0u3kx000rsz9pwcd0u1kn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/12/【Android】Service/" data-id="cjxzp0tdz000p5a9p15tggkza" class="article-share-link">Share</a>
       
       
     </footer>
@@ -267,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/11/【Design-Pattern】Factory-Pattern/" data-id="cjwi0u3l3000xsz9pcfm9ou7e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/11/【Design-Pattern】Factory-Pattern/" data-id="cjxzp0te7000w5a9p43k27jqp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -311,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】Custom-View-Components/" data-id="cjwi0u3k6000dsz9pccu89clx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/【Android】Custom-View-Components/" data-id="cjxzp0tdc000c5a9p57iqm8co" class="article-share-link">Share</a>
       
       
     </footer>
@@ -357,138 +498,7 @@ UI controllers such as activities and fragments are primarily intended to displa
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】ViewModel/" data-id="cjwi0u3ky000ssz9p3b50733z" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Android】LiveData" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/10/【Android】LiveData/" class="article-date">
-  <time datetime="2019-05-10T07:24:24.000Z" itemprop="datePublished">2019-05-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/10/【Android】LiveData/">【Android】LiveData</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/topic/libraries/architecture/livedata" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/architecture/livedata</a></p>
-<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services. 遵守其他组件的生命周期。
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】LiveData/" data-id="cjwi0u3ki000nsz9p1iymz11x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【Android】DataBinding" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/10/【Android】DataBinding/" class="article-date">
-  <time datetime="2019-05-10T03:08:49.000Z" itemprop="datePublished">2019-05-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/10/【Android】DataBinding/">【Android】DataBinding</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/topic/libraries/data-binding/" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/data-binding/</a></p>
-<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><pre><code>bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically
-</code></pre><p>布局中的UI组件和数据源进行绑定，<strong>声明式的而非编程式的</strong>。</p>
-<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><p>地址：<a href="https://developer.android.com/topic/libraries/data-binding/start.html#build_environment" target="_blank" rel="noopener">https://developer.android.com/topic/libraries/data-binding/start.html#build_environment</a></p>
-<ul>
-<li><p>开启databinding</p>
-</li>
-<li><p>布局文件声明</p>
-</li>
-</ul>
-<p>1、根元素为layout</p>
-<p>2、data标签指明变量属性。variable属性。</p>
-<p>3、视图：没有使用databinding的布局内容</p>
-<ul>
-<li><p>数据类声明</p>
-</li>
-<li><p>设置绑定</p>
-</li>
-</ul>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p><a href="https://github.com/googlesamples/android-databinding" target="_blank" rel="noopener">https://github.com/googlesamples/android-databinding</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/10/【Android】DataBinding/" data-id="cjwi0u3k9000fsz9pum7iwh0u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-SwipeRefreshLayout" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/09/SwipeRefreshLayout/" class="article-date">
-  <time datetime="2019-05-09T09:30:57.000Z" itemprop="datePublished">2019-05-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/09/SwipeRefreshLayout/">SwipeRefreshLayout</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="官方地址"><a href="#官方地址" class="headerlink" title="官方地址"></a>官方地址</h4><p><a href="https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout" target="_blank" rel="noopener">https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout</a></p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/SwipeRefreshLayout/" data-id="cjwi0u3jv0007sz9pyw3zg0w5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/10/【Android】ViewModel/" data-id="cjxzp0te1000r5a9ph9n2udhi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -521,7 +531,7 @@ UI controllers such as activities and fragments are primarily intended to displa
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -534,23 +544,23 @@ UI controllers such as activities and fragments are primarily intended to displa
       <ul>
         
           <li>
+            <a href="/2019/07/12/Ubuntu-18-04-fcitx-rime-Ctrl-s-快捷键变成切换输入法/">Ubuntu 18.04 fcitx-rime Ctrl+s 快捷键变成切换输入法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/27/【Flutter】ListView/">【Flutter】ListView</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/26/【Flutter】状态管理/">【Flutter】状态管理</a>
+          </li>
+        
+          <li>
             <a href="/2019/06/04/【Flutter】Target-of-URI-doesn-t-exist/">【Flutter】Target of URI doesn&#39;t exist</a>
           </li>
         
           <li>
             <a href="/2019/06/02/【Flutter】插件/">【Flutter】插件</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/01/【Flutter】widget/">【Flutter】widget</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/01/【Flutter】布局/">【Flutter】布局</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/01/【Android】Gradle管理/">【Android】Gradle管理</a>
           </li>
         
       </ul>
